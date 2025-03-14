@@ -157,17 +157,19 @@ body {
 .mobile-menu li {
   width: 100%;
   border-bottom: 1px solid #f0f0f0;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 20px 0;
   text-align: center;
 }
 
-.mobile-menu li a {
+/* Enlaces de menú normal */
+.mobile-menu li:not(.social-mobile) a {
   display: block;
   width: 100%;
-  padding: 10px 20px;
+  padding: 0px 0px;
   text-decoration: none;
   color: var(--black);
+  font-weight: 700;
   transition: background-color 0.3s ease;
   box-sizing: border-box;
   text-align: center;
@@ -179,11 +181,20 @@ body {
 
 .social-mobile {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px 0;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  gap: 60px;
+  padding: 0px 0;
+  border-bottom: 1px solid #f0f0f0; /* Si no quieres línea, pon 'none' */
 }
 
+.social-mobile a {
+  display: inline-flex;   /* Para que no se extiendan todo el ancho */
+  align-items: center;
+  justify-content: center;
+  width: auto;            /* Evita que tomen el 100% */
+  padding: 0;             /* Controla el espacio alrededor del icono */
+}
 
 .hero {
   position: relative;
@@ -256,7 +267,8 @@ body {
 .services-section,
 .OtherServices-section,
 .Nosotros-section,
-.Proyectos-section {
+.Proyectos-section,
+.Instagram-section{
   height: 100vh;
   align-content: center;
   background: linear-gradient(rgba(234, 231, 231, 0.8), rgba(234, 231, 231, 0.8)),
@@ -380,6 +392,27 @@ transition: 0.2s ease-in-out;
 }
 
 
+/* Sección de Instagram: no es necesario que ocupe 100vh */
+.Instagram-section {
+  display: none; /* Por defecto oculto en desktop */
+  text-align: center;
+  background: linear-gradient(rgba(234, 231, 231, 0.9), rgba(234, 231, 231, 0.9)),
+              url('../imgs/FondoTextura2.png') center/cover no-repeat;
+  padding: 2rem 1rem; /* Ajusta el padding según tu gusto */
+}
+
+/* Contenedor del embed de Instagram */
+.instagram-mobile-block {
+  max-width: 400px;
+  margin: 0 auto; /* Centra horizontalmente */
+  background: #fff; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+
+
 footer {
   font-size: 0.95rem;
   scroll-snap-align: end;
@@ -475,37 +508,119 @@ footer {
   }
 }
 
+/* Ajusta la altura total de la tarjeta para más espacio */
+.service-card {
+  display: flex;
+  flex-direction: column;
+  width: 220px;               /* Ancho deseado */
+  height: 340px;             /* Aumenta un poco la altura total */
+  margin: 1rem auto;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  text-align: center;
+  cursor: default;
+  transition: transform 0.3s ease;
+}
 
-@media (max-width: 768px) {
-  .services-section {
-    padding: 2rem 1rem;
-    background-color: var(--off-white);
-    text-align: center;
+/* Hover suave (solo en desktop con puntero) */
+@media (hover: hover) {
+  .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(5);          /* Un ligero zoom (ajusta a tu gusto) */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Sombra sutil para realzar */
   }
-  .services-header {
-    margin-bottom: 2rem;
+  .service-card:hover {
+    transform: scale(5);          /* Un ligero zoom (ajusta a tu gusto) */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Sombra sutil para realzar */
   }
-  .services-header h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-  }
-  .services-header p {
-    font-size: 1rem;
-    margin: 0 auto 1rem;
-    max-width: 90%;
-  }
+}
 
-  .swiper {
+/* Franja azul superior */
+.service-top {
+  background-color: #0b5274;  /* Azul corporativo */
+  position: relative;
+  height: 100px;             /* Un poco menor para ganar espacio abajo */
+  padding: 1rem;
+  display: flex;
+  align-items: center;       
+  justify-content: center;   
+}
+
+/* Ícono visible por defecto */
+.service-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+/* Título superior (blanco), oculto por defecto */
+.service-title-top {
+  position: absolute;
+  color: #fff;               /* Blanco en hover */
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+/* Franja blanca inferior */
+.service-bottom {
+  flex: 1;                   /* Toma el espacio restante */
+  background: #fff;
+  /* Aumenta el padding para separarlo más de la franja azul */
+  padding: 2rem 1rem;        
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Empuja el contenido hacia el fondo */
+  align-items: center;       
+  text-align: center;
+  position: relative;
+  gap: 0.75rem;              /* Espacio entre título y lista */
+}
+
+/* Título inferior (azul), visible por defecto */
+.service-title-bottom {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0b5274;
+  transition: all 0.3s ease;
+}
+
+/* Lista de detalles, oculta por defecto */
+.service-details {
+  display: none;
+  list-style: none;
+  margin: 0;              /* Sin margen para no pegarse mucho al título */
+  color: var(--blue);
+  transition: all 0.3s ease;
+}
+
+/* Cada ítem con algo de separación */
+.service-details li {
+  margin: 0.3rem 0;
+}
+
+/* --- ESTADOS AL HOVER (solo desktop) --- */
+@media (hover: hover) {
+  /* Al pasar el mouse: 
+     1) Se esconde el ícono 
+     2) Aparece el título blanco arriba
+     3) Desaparece el título azul de abajo
+     4) Aparece la lista de detalles
+  */
+  .service-card:hover .service-icon {
+    opacity: 0;
+  }
+  .service-card:hover .service-title-top {
     display: block;
-    padding: 0;
   }
-  
-  
-  .service-card .service-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--black);
-    margin-top: 0.5rem;
+  .service-card:hover .service-title-bottom {
+    opacity: 0;
+  }
+  .service-card:hover .service-details {
+    display: block;
   }
 }
 
@@ -560,12 +675,32 @@ footer {
   }
 }
 
-
-
 @media (max-width: 768px) {
-  footer .flex ul {
+  .Nosotros-section img {
+    width: 80%;
+  }
+  .Nosotros-section ul{
     display: none;
   }
 }
 
+/* Mostramos la sección solo en mobile */
+@media (max-width: 768px) {
+  .Instagram-section {
+    display: block;
+  }
+}
 
+@media (max-width: 768px) {
+  /* 1) Ocultar el menú de enlaces en el footer */
+  .footer-menu {
+    display: none;
+  }
+
+  /* 2) Poner logo y redes en la misma fila o centrados como prefieras */
+  .footer-main {
+    flex-direction: row;       /* Cambiamos a fila en móvil */
+    justify-content: space-between;
+    align-items: center;
+  }
+}
