@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orlux</title>
+
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-gray-200 text-gray-800">
+  
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="">
+          <img src="imgs/svgs/orilux-bl.svg" alt="Logo Orilux" />
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#Inicio">Inicio</a></li>
+          <li><a href="#Servicios">Servicios</a></li>
+          <li><a href="#Nosotros">Nosotros</a></li>
+          <li><a href="#Proyectos">Proyectos</a></li>
+        </ul>
+      </nav>
+      <div class="social">
+        <a href="https://facebook.com" target="_blank">
+          <img src="imgs/svgs/Facebook.svg" alt="Facebook" />
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <img src="imgs/svgs/Instagram.svg" alt="Instagram" />
+        </a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="#Inicio">Inicio</a></li>
+        <li><a href="#Servicios">Servicios</a></li>
+        <li><a href="#Nosotros">Nosotros</a></li>
+        <li class="social-mobile">
+          <a href="https://facebook.com" target="_blank">
+            <img src="imgs/icons/Sanitaria.svg" alt="Facebook" />
+          </a>
+          <a href="https://instagram.com" target="_blank">
+            <img src="imgs/icons/Sanitaria.svg" alt="Instagram" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+
+  <section id="Inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 data-aos="fade-right">Soluciones eléctricas y de construcción</h1>
+        <p data-aos="fade-left">Con calidad y confianza.</p>
+        <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20el%20servicio%20de%20Orlux" target="_blank"
+          class="hero-button" data-aos="zoom-in">
+          Contactar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="Servicios" class="services-section">
+    <div class="Seccion-overlay"></div>
+    <div class="services-header mb-8">
+      <h2 class="text-3xl font-bold text-gray-800 mb-1 uppercase tracking-wide" data-aos="fade-up">Nuestros Servicios
+      </h2>
+      <div class="mt-2 mx-auto w-16 h-1 bg-blue-600" data-aos="fade-up" data-aos-delay="100"
+          style="background-color: #0b5274;"></div>
+      <p class="mt-4 text-gray-600" data-aos="fade-up" data-aos-delay="200">
+        Explora nuestra amplia gama de servicios especializados, pensados para transformar cada espacio.
+      </p>
+    </div>
+
+    <div class="swiper mySwiper mt-8" style="max-width:1200px; margin:auto;">
+      <div class="swiper-wrapper">
+        <!-- Tarjeta 1 -->
+        <div class="swiper-slide service-card" data-aos="fade-up">
+          <div class="circle circle-1">
+            <h3 class="service-title">Albañilería</h3>
+            <img src="imgs/icons/Albanileria.svg" alt="Albañilería" />
+          </div>
+          
+          <ul class="service-details">
+            <li>Reformas y obras</li>
+            <li>Instalaciones eléctricas</li>
+            <li>Diagnóstico y reparación</li>
+          </ul>
+          <h3 class="service-title">Albañilería</h3>
+          
+        </div>
+        <!-- Tarjeta 2 -->
+        <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="circle circle-2">
+            <h3 class="service-title">Sanitaria</h3>
+            <img src="imgs/icons/Sanitaria.svg" alt="Sanitaria" />
+          </div>
+          <ul class="service-details">
+            <li>Reformas y obras</li>
+            <li>Instalaciones sanitarias</li>
+            <li>Reparación de fallas</li>
+          </ul>
+          <h3 class="service-title">Sanitaria</h3>
+        </div>
+        <!-- Tarjeta 3 -->
+        <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="circle circle-3">
+            <h3 class="service-title">Electricidad</h3>
+            <img src="imgs/icons/Electricidad.svg" alt="Electricidad" />
+          </div>
+          <ul class="service-details">
+            <li>Instalaciones eléctricas</li>
+            <li>Reformas y obras</li>
+            <li>Diagnóstico y reparación</li>
+          </ul>
+          <h3 class="service-title">Electricidad</h3>
+        </div>
+        <!-- Tarjeta 4 -->
+        <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="circle circle-4">
+            <h3 class="service-title">Herrería</h3>
+            <img src="imgs/icons/Herreria.svg" alt="Herrería" />
+          </div>
+          <ul class="service-details">
+            <li>Estructuras metálicas</li>
+            <li>Rejas y portones</li>
+            <li>Mantenimiento de herrería</li>
+          </ul>
+          <h3 class="service-title">Herrería</h3>
+        </div>
+        <!-- Tarjeta 5 -->
+        <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="circle circle-5">
+            <h3 class="service-title">Pintura</h3>
+            <img src="imgs/icons/Pintura.svg" alt="Pintura" />
+          </div>
+          <ul class="service-details">
+            <li>Pintura interior y exterior</li>
+            <li>Revestimientos</li>
+            <li>Acabados decorativos</li>
+          </ul>
+          <h3 class="service-title">Pintura</h3>
+        </div>
+      </div>
+      <!-- Botones de navegación -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <!-- Paginación -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section id="OtrosServicios" class="OtherServices-section py-16">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 uppercase tracking-wide" data-aos="fade-up">Más servicios para tu
+        hogar y empresa</h2>
+      <div class="mx-auto w-16 h-1 mt-2" data-aos="fade-up" data-aos-delay="100" style="background-color: #0b5274;">
+      </div>
+      <p class="text-gray-600 mt-4 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+        Además de nuestros servicios principales, ofrecemos una variedad de soluciones
+        para el mantenimiento y mejora de tu espacio.
+      </p>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- Categoría 1: EXTERIOR -->
+      <div class="p-6 rounded-lg shadow-sm border-l-4 bg-white text-left card-accordion" data-aos="fade-up"
+        style="border-color: #0b5274;">
+        <h3 class="text-xl font-semibold text-gray-700 mb-1">Exterior</h3>
+        <p class="text-sm text-gray-500 mb-4 italic">Soluciones para áreas externas</p>
+        <div class="card-details">
+          <ul class="list-disc list-inside text-gray-600 space-y-1">
+            <li>Sistemas de riego</li>
+            <li>Mantenimiento de piscinas</li>
+            <li>Paisajismo y jardines</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Categoría 2: INTERIOR -->
+      <div class="p-6 rounded-lg shadow-sm border-l-4 border-blue-500 bg-white text-left card-accordion"
+        data-aos="fade-up" data-aos-delay="100" style="border-color: #0b5274;">
+        <h3 class="text-xl font-semibold text-gray-700 mb-1">Interior</h3>
+        <p class="text-sm text-gray-500 mb-4 italic">Renovación y confort dentro de tu hogar</p>
+        <div class="card-details">
+          <ul class="list-disc list-inside text-gray-600 space-y-1">
+            <li>Muebles en madera</li>
+            <li>Pulido de parquet</li>
+            <li>Cortinas roller</li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- Categoría 3: SEGURIDAD -->
+      <div class="p-6 rounded-lg shadow-sm border-l-4 border-blue-500 bg-white text-left card-accordion" data-aos="fade-up"
+        data-aos-delay="200" style="border-color: #0b5274;">
+        <h3 class="text-xl font-semibold text-gray-700 mb-1">Seguridad</h3>
+        <p class="text-sm text-gray-500 mb-4 italic">Protege tu hogar o negocio</p>
+        <div class="card-details">
+          <ul class="list-disc list-inside text-gray-600 space-y-1">
+            <li>Cercos eléctricos</li>
+            <li>Cerrajería</li>
+            <li>Toldos parasoles</li>
+          </ul>
+        </div>
+        
+      </div>
+      <!-- Categoría 4: COMPLEMENTOS -->
+      <div class="p-6 rounded-lg shadow-sm border-l-4 border-blue-500 bg-white text-left card-accordion" data-aos="fade-up"
+        data-aos-delay="300" style="border-color: #0b5274;">
+        <h3 class="text-xl font-semibold text-gray-700 mb-1">Complementos</h3>
+        <p class="text-sm text-gray-500 mb-4 italic">Arreglos y mejoras adicionales</p>
+        <div class="card-details">
+          <ul class="list-disc list-inside text-gray-600 space-y-1">
+            <li>Persianas</li>
+            <li>Pequeños arreglos</li>
+            <li>Instalaciones varias</li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="#Contacto"
+        class="inline-block bg-yellow-500 px-6 py-3 text-white rounded-lg shadow-md hover:bg-yellow-400 transition"
+        data-aos="fade-up">
+        CONSULTAR COTIZACIÓN
+      </a>
+    </div>
+  </section>
+
+  <!-- Sección NOSOTROS -->
+  <section id="Nosotros" class="Nosotros-section py-16  text-gray-800">
+    <div class="Nosotros-container max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+      <div class="md:w-1/2">
+        <img src="imgs/SobreNosotros.png" alt="Sobre Nosotros" class="rounded-lg shadow-md mx-auto w-full md:w-auto" />
+      </div>
+      <div class="Texto md:w-1/2 text-center md:text-left">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4" style="color: #0b5274;">
+          ¿Quiénes somos?
+        </h2>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+          En Orlux, nos especializamos en construcción, mantenimiento y reparación.
+          Ofrecemos soluciones en
+          <span class="text-blue-700 font-semibold" style="color: #0b5274;">electricidad, albañilería,
+            sanitaria</span>
+          y más, con un enfoque en calidad, seguridad y confianza.
+        </p>
+        <ul class="text-gray-700 space-y-2 mb-6">
+          <li class="flex items-start">
+            <img src="imgs/icons/Sanitaria.svg" alt="✔" class="h-5 w-5 mr-2 mt-1" />
+            <span>Materiales y mano de obra de primera calidad.</span>
+          </li>
+          <li class="flex items-start">
+            <img src="imgs/icons/Sanitaria.svg" alt="✔" class="h-5 w-5 mr-2 mt-1" />
+            <span>Profesionales altamente capacitados.</span>
+          </li>
+          <li class="flex items-start">
+            <img src="imgs/icons/Sanitaria.svg" alt="✔" class="h-5 w-5 mr-2 mt-1" />
+            <span>Atención personalizada para cada proyecto.</span>
+          </li>
+        </ul>
+        <a href="#Contacto"
+          class="Nosotros-button inline-block bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md">
+          Contáctanos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección PROYECTOS -->
+  <section id="Proyectos" class="Proyectos-section hidden md:block w-full  py-16">
+    <div class="w-full">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-extrabold text-gray-800 uppercase tracking-wide" data-aos="fade-up">
+          Proyectos
+        </h2>
+        <div class="mt-2 mx-auto w-16 h-1 bg-blue-600" data-aos="fade-up" data-aos-delay="100"
+          style="background-color: #0b5274;"></div>
+      </div>
+      <div class="grid grid-cols-4 gap-0">
+        <img src="imgs/galery/Galeria1.png" alt="Proyecto 1" class="w-full h-auto object-cover" data-aos="fade-up" />
+        <img src="imgs/galery/Galeria2.png" alt="Proyecto 2" class="w-full h-auto object-cover" data-aos="fade-up"
+          data-aos-delay="100" />
+        <img src="imgs/galery/Galeria3.png" alt="Proyecto 3" class="w-full h-auto object-cover" data-aos="fade-up"
+          data-aos-delay="200" />
+        <img src="imgs/galery/Galeria4.png" alt="Proyecto 4" class="w-full h-auto object-cover" data-aos="fade-up"
+          data-aos-delay="300" />
+      </div>
+    </div>
+  </section>
+  </div>
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 py-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+        <div class="w-full md:w-auto flex justify-start">
+          <a href="#Inicio" class="flex items-center">
+            <img src="imgs/svgs/orilux-bl.svg" alt="Orilux Logo" class="w-20" />
+          </a>
+        </div>
+        <div class="w-full md:w-auto flex justify-center my-4 md:my-0">
+          <ul class="flex space-x-6">
+            <li><a href="#Inicio" class="hover:underline">Inicio</a></li>
+            <li><a href="#Servicios" class="hover:underline">Servicios</a></li>
+            <li><a href="#Proyectos" class="hover:underline">Proyectos</a></li>
+            <li><a href="#Nosotros" class="hover:underline">Nosotros</a></li>
+            <li><a href="#Contacto" class="hover:underline">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="w-full md:w-auto flex justify-end">
+          <div class="flex gap-4">
+            <a href="#" aria-label="Instagram" class="hover:text-white transition">
+              <img src="imgs/svgs/Instagram-White.svg" alt="Instagram" class="h-6 w-6" />
+            </a>
+            <a href="#" aria-label="Facebook" class="hover:text-white transition">
+              <img src="imgs/svgs/Facebook-White.svg" alt="Facebook" class="h-6 w-6" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-6 text-center text-sm text-gray-400">
+        &copy; 2025 Orilux - Todos los derechos reservados
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Scripts -->
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Inicializar AOS
+      AOS.init({
+        duration: 1000,
+        once: false,
+      });
+      // Permite reanimar al salir y volver a entrar
+      document.addEventListener('aos:out', (event) => {
+        event.detail.target.classList.remove('aos-animate');
+      });
+    });
+  </script>
+  <!-- Tu script.js -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
