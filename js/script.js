@@ -7,6 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
     hamburger.classList.toggle('open');
   });
 
+
+  const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      hamburger.classList.remove('open');
+    });
+  });
   const accordionCards = document.querySelectorAll('.OtherServices-section .card-accordion');
   accordionCards.forEach(card => {
     card.addEventListener('click', function () {
@@ -43,13 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Observamos la sección Hero
   observer.observe(heroSection);
-  
-  // Otras funcionalidades (Swiper, scroll, etc.)
+
   const swiper = new Swiper('.mySwiper', {
     loop: true,
-    spaceBetween: 50,
+    spaceBetween: 20,
     slidesPerView: 1,
-    parallax: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -59,19 +65,20 @@ document.addEventListener('DOMContentLoaded', function () {
       clickable: true,
     },
     breakpoints: {
-      600: { 
-        slidesPerView: 3,
-        spaceBetween: 20 },
-      1026: { 
-        slidesPerView: 5,
-        spaceBetween: 20,
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20
       },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 20
+      }
     },
     autoplay: {
       delay: 4000,
     },
   });
-
+  
   // Calcula la altura del header
   const headerHeight = document.querySelector('.header').offsetHeight;
 
@@ -84,11 +91,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const htmlElement = document.documentElement;
     // Deshabilitar temporalmente el scroll-snap
     htmlElement.style.scrollSnapType = 'none';
-  
+
     const start = window.pageYOffset;
     const distance = targetPosition - start;
     const startTime = performance.now();
-  
+
     function animateScroll(currentTime) {
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
@@ -103,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     requestAnimationFrame(animateScroll);
   }
-  
+
 
   // Intercepta los clics en enlaces internos y utiliza la función personalizada
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -120,4 +127,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });
-
