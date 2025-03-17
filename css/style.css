@@ -704,3 +704,10 @@ footer {
     align-items: center;
   }
 }
+
+@media (max-width: 425px) {
+  .service-card:hover .service-title-top,
+  .service-card:hover .service-details {
+    display: none; /* Oculta el contenido que aparece con hover */
+  }
+}
