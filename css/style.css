@@ -706,8 +706,15 @@ footer {
 }
 
 @media (max-width: 425px) {
-  .service-card:hover .service-title-top,
+  .service-bottom, .service-details {
+    display: block !important; /* Forzar visibilidad en mobile */
+    opacity: 1;                 /* Evita que sea invisible */
+    visibility: visible !important;
+  }
+  .service-card:hover .service-bottom,
   .service-card:hover .service-details {
-    display: none; /* Oculta el contenido que aparece con hover */
+    display: block; /* Oculta el contenido que aparece con hover */
+    opacity: 1;
+    visibility: visible;
   }
 }
