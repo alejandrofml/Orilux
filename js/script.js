@@ -8,13 +8,17 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-  const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+  const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
   mobileMenuLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('touchstart', (event) => { // el evento por defecto es el click, pero como estamos en un cel, lo cambiamos a touchstart 
+      event.preventDefault(); // prevenimos el evento por defecto 
       mobileMenu.classList.remove('active');
       hamburger.classList.remove('open');
+      window.location.href = link.href; // en lugar de hacer click, redirigimos a la url del link
     });
   });
+
+
   const accordionCards = document.querySelectorAll('.OtherServices-section .card-accordion');
   accordionCards.forEach(card => {
     card.addEventListener('click', function () {
